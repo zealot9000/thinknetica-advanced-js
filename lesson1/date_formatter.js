@@ -2,7 +2,7 @@ let userInput = prompt('Введите дату в формате ММ/ЧЧ/ГГ
 let [month, day, year] = userInput.split('/');
 
 if (month > 12 || day > 31 || year.length < 1) {
-    alert('Ошибка формата ввода!')
+    alert('Ошибка формата ввода!');
 } else {
-    alert(`${day}.${month}.${year}`)
-};
+    alert(`${day}.${month}.${year}`);
+}
