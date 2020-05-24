@@ -5,17 +5,9 @@ function wordStat (text = '') {
     if (typeof text !== 'string')
         throw new Error('Only strings are allowed in an argument');
 
-    let result = [];
-    let words = text.split(' ');
-
-    words.forEach((word) => {
-        let charCodeSum = 0;
-
-        word.split('').map(function(symbol) {
-            charCodeSum += symbol.charCodeAt();
-        })
-
-        result[result.length] = {'word': word, 'sum': charCodeSum};
+    let result = text.split(' ').map(function(word) {
+        let sum = word.split('').reduce((codeSum, symbol) => codeSum + symbol.charCodeAt(), 0);
+        return {word, sum};
     })
 
     return result;
