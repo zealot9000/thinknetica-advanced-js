@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Control System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="flight-list-block">
+    <h2>List of flights</h2>
+    <template id="flight-list-item-template">
+        <li>
+            <b data-field="name"></b>
+            <span data-field="count"></span> /
+            <span data-field="seats"></span>
+        </li>
+    </template>
+    <ul id="flight-list">
+    </ul>
+</div>
+
+<div id="flight-details-block">
+    <h2>Flight details</h2>
+    <ul id="flight-details">
+        <li>
+            <b>Flight:</b>
+            <span data-field="flight"></span>
+        </li>
+        <li>
+            <b>Count of seats:</b>
+            <span data-field="countOfSeats"></span>
+        </li>
+        <li>
+            <b>Reserved seats:</b>
+            <span data-field="reservedSeats"></span>
+        </li>
+        <li>
+            <b>Registered seats:</b>
+            <span data-field="registeredSeats"></span>
+        </li>
+    </ul>
+    <template id="flight-details-ticket-template">
+        <li>
+            <b data-field="id"></b>
+            <span data-field="fullName"></span> /
+            <span data-field="seat"></span>
+            <span data-field="registrationTime"></span>
+        </li>
+    </template>
+    <ul id="tickets-list">
+    </ul>
+</div>
+
+
+<div id="e-registration-block">
+    <h2>e-Registration</h2>
+    <form id="e-registration-form">
+        <input name="ticket" placeholder="Please enter ticket number">
+        <input name="fullname" placeholder="Please enter your full name">
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<div id="buy-ticket-block">
+    <h2>Buy ticket</h2>
+    <form id="buy-ticket-form">
+        <select id="select-flight">
+            <option selected disabled>Choose a flight</option>
+        </select>
+        <input name="fullName" placeholder="Please enter your full name">
+        <select name="seatType">
+            <option selected disabled>Choose a seat type</option>
+            <option value="0">Standart</option>
+            <option value="1">Business</option>
+          </select>
+        <button type="submit">Buy</button>
+    </form>
+</div>
+
+<script src="core/main.js"></script>
+<script src="core/utils.js"></script>
+<script src="core/add-flight.js"></script>
+<script src="core/buy-ticket.js"></script>
+<script src="core/e-registration.js"></script>
+<script src="core/flight-report.js"></script>
+
+<script src="utils.js"></script>
+<script src="display-flights.js"></script>
+<script src="flight-details.js"></script>
+<script src="e-registration.form.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
