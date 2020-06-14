@@ -1,0 +1,17 @@
+table {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+table tr td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+}
+
+table td[data-code=black] { background-color: black; }
+table td[data-code=yellow] { background-color: yellow; }
+table td[data-code=green] { background-color: green; }
+table td[data-code=deeppink] { background-color: deeppink; }
+table td[data-code=orange] { background-color: orange; }
