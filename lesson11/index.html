@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="chat-window"></div>
+
+    <form>
+      <input type="text" name="username" id="name" placeholder="name" />
+      <input type="text" name="text" id="text" placeholder="text" />
+      <input type="text" name="channel" id="channel" placeholder="channel" />
+      <span id="buttons">
+        <input type="submit" data-action="sendMessage" value="send" />
+        <input type="submit" data-action="login" value="login channel" />
+        <input type="submit" data-action="logout" value="exit channel" />
+        <input type="submit" data-action="exitChat" value="exit chat" />
+      </span>
+    </form>
+
+    <script src="websocket.js"></script>
+  </body>
+</html>
